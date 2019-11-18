@@ -1,0 +1,32 @@
+{
+  "name": "arul-ui-globalcss",
+  "version": "1.0.0",
+  "description": "Arul SCSS/SASS global css",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arulkumar-lab/arul-ui-globalcss.git"
+  },
+  "keywords": [
+    "arul",
+    "scss",
+    "sass",
+    "global-css",
+    "css"
+  ],
+  "author": "Arul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arulkumar-lab/arul-ui-globalcss/issues"
+  },
+  "homepage": "https://github.com/arulkumar-lab/arul-ui-globalcss#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-lint": "^1.4.0",
+    "node-sass": "^4.13.0"
+  }
+}
