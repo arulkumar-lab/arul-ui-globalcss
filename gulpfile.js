@@ -24,4 +24,4 @@ gulp.task("sass", function() {
     .pipe(gulp.dest("./dist"));
 });
 
-gulp.task("default", gulp.parallel('sass-lint', 'sass'));
+gulp.task("default", gulp.parallel("sass-lint", "sass"));

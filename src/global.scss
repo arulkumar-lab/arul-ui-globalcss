@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset 'UTF-8';
 
 //Set SCSS configuration files
 @import 'configs/variables';
@@ -9,6 +9,7 @@
 @import 'vendors/jquery-ui';
 
 @import 'base/reset';
+@import 'base/normalize';
 @import 'base/typography';
 
 @import 'layout/navigation';

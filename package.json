@@ -4,6 +4,7 @@
   "description": "Arul SCSS/SASS global css",
   "main": "index.js",
   "scripts": {
+    "start": "gulp default",
     "test": "test"
   },
   "repository": {
