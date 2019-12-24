@@ -1,6 +1,15 @@
 // Sass Variables
-$font_family_1: monospace,monospace;
-$font_family_2: Verdana,sans-serif;
-$font_family_3: serif;
-$font_family_4: "Segoe UI",Arial,sans-serif;
-$font_family_5: Consolas,"courier new";
+$base-font-family: 'Roboto', Arial, Helvetica, sans-serif;
+$font-weight-regular: 400 !default;
+$font-weight-bold: 700 !default;
+$float-left: left !default;
+$float-none: right !default;
+$breakpoints: (
+  ('xs', 480px),
+  ('s', 624px),
+  ('sm', 768px),
+  ('m', 896px),
+  ('md', 1024px),
+  ('l', 1195px),
+  ('lg', 1366px),
+) !default;

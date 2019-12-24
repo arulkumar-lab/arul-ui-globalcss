@@ -1,1 +1,44 @@
+@import 'variables';
 // Sass Mixins
+
+///Grid mixin-generator
+///@size of the grid
+///@columns of the grid
+@mixin grid-generator($size, $grid-columns) {
+  @for $i from 1 through $grid-columns {
+    .col-#{$size}-#{$i}-#{$grid-columns} {
+      float: $float-left;
+      width: percentage($i / $grid-columns);
+    }
+  }
+}
+
+@mixin respond-from($media) {
+  @each $breakpoint in $breakpoints {
+    @if $media == nth($breakpoint, 1) {
+      @media (min-width: #{nth($breakpoint, 2)})  { @content; }
+    }
+  }
+}
+
+@mixin respond-to($media) {
+  @for $i from 1 through length($breakpoints) {
+    $breakpoint: nth($breakpoints, $i);
+    $name: nth($breakpoint, 1);
+    $value: nth($breakpoint, 2);
+
+    @if $media == $name {
+      @if $i == 1 {
+        @media (max-width: #{$value})  { @content; }
+      } @else if $i == length($breakpoints) {
+        @media (min-width: #{$value})  { @content; }
+      } @else {
+        $next-breakpoint: nth($breakpoints, $i + 1);
+        $next-name: nth($next-breakpoint, 1);
+        $next-value: nth($next-breakpoint, 2);
+
+        @media (min-width: #{$value}) and (max-width: #{$next-value - 1px}) { @content; }
+      }
+    }
+  }
+}

@@ -5,7 +5,6 @@ let gulp = require("gulp"),
 
 //Gulp task for lint SCSS
 gulp.task("sass-lint", function() {
-  console.log("ssss");
   return gulp
     .src("src/**/*.s+(a|c)ss")
     .pipe(sassLint())

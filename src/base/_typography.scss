@@ -1,1 +1,80 @@
 // Typography rules
+@import url('https://fonts.googleapis.com/css?family=Anton|Roboto');
+@import '../configs/functions';
+@import '../configs/variables';
+
+$globalui-scale-labels: (p, bq, sh, h, hero);
+
+$globalui-typography: (
+  default: (
+    base-font-size: 16px,
+    vertical-rhythm: 1.414,
+    type-scale: 1.2,
+    min-width: null
+  ),
+  medium: (
+    base-font-size: 18px,
+    vertical-rhythm: 1.5,
+    type-scale: 1.414,
+    min-width: 480px
+  ),
+  large: (
+    base-font-size: 20px,
+    vertical-rhythm: 1.618,
+    type-scale: 1.5,
+    min-width: 960px
+  ),
+  xlarge: (
+    base-font-size: 24px,
+    vertical-rhythm: 1.618,
+    type-scale: 1.618,
+    min-width: 1300px
+  )
+);
+
+@each $label in $globalui-scale-labels {
+  %#{$label} {
+    @each $breakpoint, $data in $globalui-typography {
+      $generated-values: globalui-generate-font-size($label, $breakpoint);
+      $font-size: nth($generated-values, 1);
+      $line-height: nth($generated-values, 2);
+
+      @if map-get($data, min-width) != null {
+        @media screen and (min-width: map-get($data, min-width)) {
+          font-size: $font-size;
+          line-height: $line-height;
+        }
+      } @else {
+        font-size: $font-size;
+        line-height: $line-height;
+      }
+    }
+  }
+}
+
+html {
+  font-family: $base-font-family;
+}
+
+body,
+.normal {
+  @extend %p;
+}
+
+.medium {
+  @extend %bq;
+}
+
+h2,
+.large {
+  @extend %sh;
+}
+
+h1,
+.large-x {
+  @extend %h;
+}
+
+.large-xx {
+  @extend %hero;
+}
