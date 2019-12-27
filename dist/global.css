@@ -562,3 +562,76 @@ html {
     margin: 0 auto;
     max-width: 1280px;
     width: 100%; } }
+
+@media (min-width: 768px) {
+  .container-full {
+    margin: 0 auto;
+    width: 100%; } }
+
+.footer-bottom {
+  background-color: #c0c0c0;
+  display: inline-block;
+  font-size: .6em;
+  line-height: 1;
+  margin-bottom: -10px;
+  padding: 15px 0;
+  width: 100%; }
+  .footer-bottom .footer-bottom-menu,
+  .footer-bottom .copyright {
+    width: 47%; }
+  .footer-bottom .footer-bottom-menu {
+    float: right;
+    padding-left: 15px;
+    text-align: right; }
+    .footer-bottom .footer-bottom-menu ul {
+      display: inline-block;
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+    .footer-bottom .footer-bottom-menu li {
+      float: left;
+      padding-right: 1.3em; }
+      .footer-bottom .footer-bottom-menu li::after {
+        content: '|';
+        margin-left: 5px;
+        margin-right: 5px; }
+      .footer-bottom .footer-bottom-menu li:last-child::after {
+        content: '';
+        margin-left: 0;
+        margin-right: 0; }
+      @media (max-width: 480px) {
+        .footer-bottom .footer-bottom-menu li {
+          margin-bottom: 8px; } }
+    .footer-bottom .footer-bottom-menu a {
+      color: #000; }
+      .footer-bottom .footer-bottom-menu a:hover {
+        color: #f00; }
+  .footer-bottom.no-footer-nav.copyright {
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    width: 100%; }
+  .footer-bottom .copyright {
+    float: left;
+    padding-left: 50px;
+    padding-right: 15px;
+    text-align: left; }
+  .footer-bottom a {
+    color: #000; }
+    .footer-bottom a:hover {
+      color: #00f; }
+
+@media only screen and (max-width: 959px) {
+  .footer-bottom .copyright,
+  .footer-bottom .footer-bottom-menu {
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    width: 100%; }
+  .footer-bottom .footer-bottom-menu {
+    margin-bottom: 15px; }
+    .footer-bottom .footer-bottom-menu li {
+      display: inline-block;
+      float: none; } }
